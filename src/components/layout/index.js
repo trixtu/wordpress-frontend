@@ -34,8 +34,8 @@ const Layout = ( {data, isPost, children} ) => {
 					/>
 				) : null}
 			</Head>
-			<Header header={header} headerMenus={headerMenu?.edges}/>
-			<div className="md:container px-5 py-24 mx-auto min-h-almost-screen">
+			<Header header={header} headerMenus={headerMenu?.edges} socialLinks={footer?.socialLinks}/>
+			<div className="md:container px-5 py-10 mx-auto min-h-almost-screen">
 				{children}
 			</div>
 			<Footer footer={footer} footerMenus={footerMenu?.edges}/>

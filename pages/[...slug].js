@@ -5,22 +5,35 @@ import { GET_PAGE } from '@/src/queries/pages/get-page'
 import { GET_PAGES_URI } from '@/src/queries/pages/get-pages'
 import { sanitize } from '@/src/utils/miscellaneous'
 import { FALLBACK, handleRedirectsAndReturnData } from '@/src/utils/slug'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
 import { isEmpty } from 'lodash'
 import { useRouter } from 'next/router'
-
 import React from 'react'
 
 const Page = ( {data} ) => {
 	const router = useRouter();
-
+	
 	// If the page is not yet generated, this will be displayed
 	// initially until getStaticProps() finishes running
 	if ( router.isFallback ) {
 		return <div>Loading...</div>;
 	}
-
+	console.log(data)
 	return (
+
 		<Layout data={data}>
+			<div>
+				<Breadcrumb spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
+					<BreadcrumbItem>
+						<BreadcrumbLink href='/'>Acasă</BreadcrumbLink>
+					</BreadcrumbItem>
+
+					<BreadcrumbItem isCurrentPage>
+						<BreadcrumbLink href='#'>{data?.page?.title}</BreadcrumbLink>
+					</BreadcrumbItem>
+				</Breadcrumb>
+			</div>
 			<div dangerouslySetInnerHTML={{__html: sanitize( data?.page?.content ?? {} )}}/>
 		</Layout>
 	);

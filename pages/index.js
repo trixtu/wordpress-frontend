@@ -4,6 +4,8 @@ import { GET_MENUS } from "@/src/queries/get-menus";
 import { GET_PAGE } from "@/src/queries/pages/get-page";
 import { sanitize } from "@/src/utils/miscellaneous";
 import { handleRedirectsAndReturnData } from "@/src/utils/slug";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
+
 
 
 export default function Home({data}) {

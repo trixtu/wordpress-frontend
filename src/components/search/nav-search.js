@@ -12,7 +12,7 @@ const NavSearch = () => {
   };
 
   return (
-    <div className="mt-4 md:mt-0">
+    <div className="mt-4 md:mt-0 pb-1">
       <SearchForm
         searchQuery={ searchQuery }
         setSearchQuery={ setSearchQuery }

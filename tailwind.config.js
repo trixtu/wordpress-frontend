@@ -26,6 +26,19 @@ module.exports = {
         'almost-screen': 'calc(-16rem + 100vh)',
         '42px': '2.625rem',
       },
+      colors: {
+        bgTopHeader: '#464855',
+        textGray: '#e5e5e5',
+        textBlack: '#121212',
+        textGold: '#de8a14',
+        green: '#cff1df',
+        greenDark: '#619A46',
+        greenHell: '#7DAA6A',
+        goldHell: '#ffdd6f',
+        gold: '#E1C158',
+        buttonColor: '#fac382',
+        buttonColorHover: '#febe73'
+      },
     },
   },
   plugins: []

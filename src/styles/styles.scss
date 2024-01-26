@@ -3,17 +3,51 @@
 @tailwind utilities;
 
 @import "libraries/nprogress";
+@import '~@wordpress/block-library/build-style/style.css';
 
-// @import "~@wordpress/base-styles/colors";
-// @import "~@wordpress/base-styles/variables";
-// @import "~@wordpress/base-styles/mixins";
-// @import "~@wordpress/base-styles/breakpoints";
-// @import "~@wordpress/base-styles/animations";
-// @import "~@wordpress/base-styles/z-index";
+@import "~@wordpress/base-styles/colors";
+@import "~@wordpress/base-styles/variables";
+@import "~@wordpress/base-styles/mixins";
+@import "~@wordpress/base-styles/breakpoints";
+@import "~@wordpress/base-styles/animations";
+@import "~@wordpress/base-styles/z-index";
 
-// //@import '~@wordpress/block-library/src/style.scss';
-// @import '~@wordpress/block-library/src/theme.scss';
+// @import '~@wordpress/block-library/src/style.scss';
+ @import '~@wordpress/block-library/src/theme.scss';
+
+
+body{
+  margin: 0;
+}
 
 .social-link svg{
   width: 24px;
+}
+.top-navbar svg{
+  width: 16px;
+  fill:#fff6c9;
+}
+
+.header {
+  z-index: 999;
+}
+
+.HeaderNav {
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__submenu{
+  display: none;
+}
+
+.nav__menu-item:hover .nav__submenu {
+  display: block;
+}
+
+.wp-block-cover__inner-container.is-layout-flow.wp-block-cover-is-layout-flow {
+  font-size: 48px;
 }

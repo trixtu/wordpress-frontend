@@ -2,6 +2,7 @@
 import client from "@/src/apollo/client";
 import "@/src/styles/styles.scss";
 import { ApolloProvider } from "@apollo/client";
+import { ChakraProvider } from "@chakra-ui/react";
 
 import Router from 'next/router';
 import NProgress from 'nprogress';
@@ -12,10 +13,15 @@ Router.events.on( 'routeChangeComplete', () => NProgress.done() );
 Router.events.on( 'routeChangeError', () => NProgress.done() );
 
 
+
 export default function App({ Component, pageProps }) {
   return (
+    
     <ApolloProvider client={client}>
-      <Component {...pageProps} />
+      <ChakraProvider>
+          <Component {...pageProps} />
+      </ChakraProvider>
     </ApolloProvider>
+   
   );
 }

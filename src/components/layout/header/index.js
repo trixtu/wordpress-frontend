@@ -4,17 +4,20 @@ import Nav from './nav'
 import { isEmpty } from 'lodash'
 
 import PropTypes from 'prop-types';
+import TopNavBar from './topNavbar';
 
-const Header = ({headerMenus, header, slug}) => {
+const Header = ({headerMenus, header, slug, socialLinks}) => {
   
+ 
   if(isEmpty(headerMenus)){
     return null;
   }
 
   return (
-    <header>
-      <Nav header={header} headerMenus={headerMenus} slug={slug}/>
-    </header>
+      <header> 
+        <TopNavBar socialLinks={socialLinks}/>
+        <Nav header={header} headerMenus={headerMenus} slug={slug}/>
+      </header>
   )
 }
 
