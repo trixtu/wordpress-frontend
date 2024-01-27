@@ -54,7 +54,7 @@ const NavBarLink = ({headerMenus}) => {
                 px={3}
                 py={1}>
                 <Link href={item?.node?.path}>
-                  <Flex alignItems={'center'} gap={1} textTransform={'uppercase'} fontSize={'sm'} py={1}>  
+                  <Flex alignItems={'center'} gap={1} textTransform={'capitalize'} fontSize={'sm'} py={1}>  
                     {item?.node?.label}
                     {item?.node?.childItems?.edges?.length > 0 && <FaChevronDown size={10}/>}
                   </Flex>
