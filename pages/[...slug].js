@@ -19,7 +19,8 @@ const Page = ( {data} ) => {
 	if ( router.isFallback ) {
 		return <div>Loading...</div>;
 	}
-	console.log(data)
+
+	
 	return (
 
 		<Layout data={data}>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { sanitize } from '../../../utils/miscellaneous';
 import Loading from '../../loading';
+import { Button } from '@chakra-ui/react';
 
 const NewsletterForm = ( { status, message, onValidated }) => {
 
@@ -63,21 +64,21 @@ const NewsletterForm = ( { status, message, onValidated }) => {
 
   return (
     <div>
-      <h3 className="mb-1 uppercase font-bold">Subscribe to newsletter</h3>
+      <h3 className="mb-3 uppercase font-bold ">Subscribe to newsletter</h3>
       <div className="flex newsletter-input-fields">
         <div className="mc-field-group">
           <input
             onChange={(event) => setEmail(event?.target?.value ?? '')}
             type="email"
             placeholder="Your email"
-            className="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-4 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+            className="appearance-none rounded-l rounded-r-none border border-gray-2 border-b block pl-4 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
             onKeyUp={(event) => handleInputKeyEvent(event)}
           />
         </div>
         <div className="button-wrap wp-block-button">
-          <button className="cursor-pointer	text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded" onClick={handleFormSubmit}>
-            Submit
-          </button>
+          <Button colorScheme={'yellow'} onClick={handleFormSubmit} roundedLeft={'none'}>
+            Mă Abonez
+          </Button>
         </div>
       </div>
       <div className="min-h-42px">

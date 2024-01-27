@@ -62,7 +62,7 @@ const Nav = ({headerMenus, header, slug}) => {
 
           </div>
         </MaxWidthWrapper>
-        <div className='hidden lg:block bg-[#f2f2ee] border-t border-borderColor'>
+        <div className='hidden lg:block bg-[#fff] border-borderColor'>
           <MaxWidthWrapper>
             <NavBarLink headerMenus={headerMenus}/>
           </MaxWidthWrapper>
