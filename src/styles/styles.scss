@@ -51,3 +51,12 @@ body{
 .wp-block-cover__inner-container.is-layout-flow.wp-block-cover-is-layout-flow {
   font-size: 48px;
 }
+
+.wp-block-image.aligncenter {
+  text-align: center;
+  width: 100%;
+}
+
+.wp-block-image img{
+  display:inline-block;
+}
