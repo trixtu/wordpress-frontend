@@ -7,6 +7,7 @@ import Seo from '../seo';
 import PropTypes from 'prop-types';
 import {isEmpty} from 'lodash';
 import { sanitize } from '@/src/utils/miscellaneous';
+import { Container } from '@chakra-ui/react';
 
 const Layout = ( {data, isPost, children} ) => {
 	const {page, post, posts, header, footer, headerMenu, footerMenu} = data || {};
@@ -35,9 +36,9 @@ const Layout = ( {data, isPost, children} ) => {
 				) : null}
 			</Head>
 			<Header header={header} headerMenus={headerMenu?.edges} socialLinks={footer?.socialLinks}/>
-			<div className="md:container px-5 py-10 mx-auto min-h-almost-screen">
+			<Container maxW={'container.xl'}>
 				{children}
-			</div>
+			</Container>
 			<Footer footer={footer} footerMenus={footerMenu?.edges}/>
 		</div>
 	);

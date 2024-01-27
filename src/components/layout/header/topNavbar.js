@@ -4,6 +4,7 @@ import React from 'react'
 import { Email, Facebook, Instagram, Youtube } from '../../icons'
 import { isArray, isEmpty } from 'lodash';
 import { getIconComponentByName } from '@/src/utils/icons-map';
+import { Container } from '@chakra-ui/react';
 
 export default function TopNavBar({socialLinks}) {
 
@@ -22,13 +23,13 @@ export default function TopNavBar({socialLinks}) {
       }}
     >
 
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-1">
+      <Container maxW={'container.xl'} py={1}>
         <div className='flex justify-between items-center'>
           <div >
           {! isEmpty(socialLinks) && isArray(socialLinks) ? (
                   <ul className='social-link flex items-center'>
                     {socialLinks.map((link,index)=>(
-                      <li key={index} className='ml-4'>
+                      <li key={index} className='mr-4'>
                         <a  href={link.iconUrl} >
                           {getIconComponentByName(link.iconName)}
                         </a>
@@ -41,11 +42,11 @@ export default function TopNavBar({socialLinks}) {
           <div className="">
             <Link href={'#'} className='flex items-center gap-2'>
              <Email/>
-              <p className="hidden sm:block mr-4">numerologie.contact@gmail.com</p>
+              <p className="hidden sm:block ">numerologie.contact@gmail.com</p>
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
       <div
         className="bg-contain  h-[5px]"
         style={{
