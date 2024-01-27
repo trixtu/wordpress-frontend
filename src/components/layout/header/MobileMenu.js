@@ -16,8 +16,8 @@ const MobileMenu = ({headerMenus}) => {
 
   return(
     <>
-      <Link ref={btnRef} onClick={onOpen} bg={'#a9d0c6'} borderRadius={5} p={2}>
-        <FaBars size={22} color="#fff"/>
+      <Link ref={btnRef} onClick={onOpen} borderRadius={5} p={2}>
+        <FaBars size={30} color="#333"/>
       </Link>
 
       <Drawer 
