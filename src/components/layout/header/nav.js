@@ -15,8 +15,7 @@ const Nav = ({headerMenus, header, slug}) => {
   const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
-      const offset = window.scrollY;
-      console.log(offset)
+      const offset = window.scrollY;  
 
       if (offset > 200) {
           setScrolled(true);

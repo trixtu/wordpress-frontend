@@ -1,5 +1,7 @@
 import client from "@/src/apollo/client";
+import HomePageUnu from "@/src/components/home-page/HomePageUnu";
 import Layout from "@/src/components/layout";
+import SliderHome from "@/src/components/ui/Slider";
 import { GET_MENUS } from "@/src/queries/get-menus";
 import { GET_PAGE } from "@/src/queries/pages/get-page";
 import { sanitize } from "@/src/utils/miscellaneous";
@@ -12,7 +14,16 @@ export default function Home({data}) {
 
   return (
 		<Layout data={data}>
-      { data?.page?.content ? <div dangerouslySetInnerHTML={{__html: sanitize( data?.page?.content ?? {} )}}/> : null }
+      
+
+      <SliderHome slider={data} />
+      {/* <NewProducts
+        products={products}
+        wishedProducts={wishedNewProducts}
+        ratings={ratings}
+      /> */}
+      {/* <HomePageUnu /> */}
+			{ data?.page?.content ? <div className="mt-4" dangerouslySetInnerHTML={{__html: sanitize( data?.page?.content ?? {} )}}/> : null }
 		</Layout>
 	);
 }

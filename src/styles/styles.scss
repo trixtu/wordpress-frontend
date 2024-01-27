@@ -14,7 +14,10 @@
 
 // @import '~@wordpress/block-library/src/style.scss';
 //  @import '~@wordpress/block-library/src/theme.scss';
-
+h1{
+  font-size: 28px;
+  font-weight: 600;
+}
 
 body{
   margin: 0;
@@ -59,4 +62,9 @@ body{
 
 .wp-block-image img{
   display:inline-block;
+}
+
+ul.list-wp {
+  list-style: disc;
+  margin-left: 40px;
 }
