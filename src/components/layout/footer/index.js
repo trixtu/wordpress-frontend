@@ -29,7 +29,7 @@ const Footer = ({footer, footerMenus}) => {
         }}
       />
       
-      <Container maxW={'container.xl'}>
+      <Container maxW={'1200px'}>
 
         <Grid 
           templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}

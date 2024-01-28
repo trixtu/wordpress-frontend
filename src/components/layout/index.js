@@ -36,7 +36,7 @@ const Layout = ( {data, isPost, children} ) => {
 				) : null}
 			</Head>
 			<Header header={header} headerMenus={headerMenu?.edges} socialLinks={footer?.socialLinks}/>
-			<Container maxW={'container.xl'} marginY={4}>
+			<Container maxW={'1200px'} marginY={4}>
 				{children}
 			</Container>
 			<Footer footer={footer} footerMenus={footerMenu?.edges}/>
