@@ -10,6 +10,7 @@ import Logo from './Logo';
 import MobileMenu from './MobileMenu';
 import Search from './Search';
 import NavBarLink from './NavBarLink';
+import { FaUser } from "react-icons/fa";
 
 const Nav = ({headerMenus, header, slug}) => {
   const [scrolled, setScrolled] = React.useState(false);
@@ -31,7 +32,7 @@ const Nav = ({headerMenus, header, slug}) => {
   
   return (
     <Box boxShadow='base' className={scrolled ? "fixed top-0 w-full z-50": null} transition={'ease-in-out'}>
-    <nav className="bg-white">
+    <nav className="bg-white shadow-md">
     <MaxWidthWrapper>
           {/* Mobile */}
           <div className='md:hidden'>
@@ -58,7 +59,7 @@ const Nav = ({headerMenus, header, slug}) => {
           <div className='hidden lg:flex md:h-[80px] items-center justify-between gap-2'>
             <Logo />
             <NavSearch/>
-
+            <FaUser size={24}/>
           </div>
           </MaxWidthWrapper>
           <div className='hidden lg:block bg-[#fff] border-borderColor'>

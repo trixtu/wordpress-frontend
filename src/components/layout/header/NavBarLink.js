@@ -49,8 +49,8 @@ const NavBarLink = ({headerMenus}) => {
               
             >
               <Box 
-                _hover={{textDecoration:'none',bgColor:'#ececec'}}
-                bgColor={colorMenu === index && '#ececec'}
+                _hover={{textDecoration:'none',bgColor:'#fafafa'}}
+                bgColor={colorMenu === index && '#fafafa'}
                 px={3}
                 py={1}
               >
@@ -80,9 +80,9 @@ const NavBarLink = ({headerMenus}) => {
                     w-[350px] 
                     px-2 
                     py-2 
-                    shadow-sm 
+                    shadow-2xl 
                     rounded-sm 
-                    bg-[#ececec] 
+                    bg-[#fafafa] 
                     z-50 
                     top-[35px]
                   "
