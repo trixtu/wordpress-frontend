@@ -4,10 +4,12 @@ import DateOfBirth from '@/src/components/ui/DateOfBirth'
 import { GET_NEWS } from '@/src/queries/news/get-news'
 import { PER_PAGE_FIRST } from '@/src/utils/pagination'
 import { handleRedirectsAndReturnData } from '@/src/utils/slug'
-import { Box, Flex, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Flex, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { FaHome } from 'react-icons/fa'
 
 const CifraDestinului = ({data}) => {
 
@@ -82,6 +84,15 @@ const CifraDestinului = ({data}) => {
   }
   return (
     <Layout data={data}>
+      <Breadcrumb marginY={2} spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
+        <BreadcrumbItem>
+          <BreadcrumbLink href='/'><Flex alignItems={'center'} gap={2}><FaHome />Acasă</Flex></BreadcrumbLink>
+        </BreadcrumbItem>
+
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink href='#'>Cifra Destinului</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
       <div className="flex items-center justify-center p-2">
           <div className="w-[650px] ">
             <Text
@@ -97,7 +108,7 @@ const CifraDestinului = ({data}) => {
               {numbers.map((number, index) => (
                 <div>
                   <Link
-                    href={number.href}
+                    href={'#'}
                     className="flex items-center justify-center"
                   >
                     <div

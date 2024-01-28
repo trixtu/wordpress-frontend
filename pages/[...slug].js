@@ -6,10 +6,11 @@ import { GET_PAGES_URI } from '@/src/queries/pages/get-pages'
 import { sanitize } from '@/src/utils/miscellaneous'
 import { FALLBACK, handleRedirectsAndReturnData } from '@/src/utils/slug'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Flex } from '@chakra-ui/react'
 import { isEmpty } from 'lodash'
 import { useRouter } from 'next/router'
 import React from 'react'
+import { FaHome } from "react-icons/fa";
 
 const Page = ( {data} ) => {
 	const router = useRouter();
@@ -25,9 +26,9 @@ const Page = ( {data} ) => {
 
 		<Layout data={data}>
 			<div>
-				<Breadcrumb spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
+				<Breadcrumb marginY={2} spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
 					<BreadcrumbItem>
-						<BreadcrumbLink href='/'>Acasă</BreadcrumbLink>
+						<BreadcrumbLink href='/'><Flex alignItems={'center'} gap={2}><FaHome />Acasă</Flex></BreadcrumbLink>
 					</BreadcrumbItem>
 
 					<BreadcrumbItem isCurrentPage>

@@ -55,13 +55,13 @@ const NavBarLink = ({headerMenus}) => {
                 py={1}
               >
                 {item?.node?.path === '#' ? (
-                  <Flex alignItems={'center'} gap={1} textTransform={'capitalize'} fontSize={'sm'} py={1} fontWeight={'bold'}>  
+                  <Flex alignItems={'center'} gap={1} fontSize={'sm'} py={1} fontWeight={'bold'}>  
                     {item?.node?.label}
                     {item?.node?.childItems?.edges?.length > 0 && <FaChevronDown size={10}/>}
                   </Flex>
                 ): (
                   <Link href={item?.node?.path}>
-                    <Flex alignItems={'center'} gap={1} textTransform={'capitalize'} fontSize={'sm'} py={1} fontWeight={'bold'}>  
+                    <Flex alignItems={'center'} gap={1} fontSize={'sm'} py={1} fontWeight={'bold'}>  
                       {item?.node?.label}
                       {item?.node?.childItems?.edges?.length > 0 && <FaChevronDown size={10}/>}
                     </Flex>

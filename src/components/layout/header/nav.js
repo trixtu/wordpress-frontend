@@ -30,7 +30,7 @@ const Nav = ({headerMenus, header, slug}) => {
 
   
   return (
-    <Box boxShadow='base' className={scrolled ? "fixed top-0 w-full z-50": null} transition={'ease-in '}>
+    <Box boxShadow='base' className={scrolled ? "fixed top-0 w-full z-50": null} transition={'ease-in-out'}>
     <nav className="bg-white">
     <MaxWidthWrapper>
           {/* Mobile */}

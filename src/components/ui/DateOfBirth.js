@@ -260,7 +260,7 @@ export default function DateOfBirth() {
                 {selectedTag + ' ' + selectedMonth.name}
               </Typography>
             </div> */}
-            <div className="w-full flex flex-col items-center justify-center  mt-4">
+            {/* <div className="w-full flex flex-col items-center justify-center  mt-4">
               <Text variant="subtitle1" fontWeight={500}>
                 Cifra destinului este:
               </Text>
@@ -273,7 +273,19 @@ export default function DateOfBirth() {
               >
                 {lifePathNumber}
               </div>
-            </div>
+            </div> */}
+            {lifePathNumber=== 1 ? <img src="/images/foto-numere/1.jpg" alt=""/> : null}
+            {lifePathNumber=== 2 ? <img src="/images/foto-numere/2.jpg" alt=""/> : null}
+            {lifePathNumber=== 3 ? <img src="/images/foto-numere/3.jpg" alt=""/> : null}
+            {lifePathNumber=== 4 ? <img src="/images/foto-numere/4.jpg" alt=""/> : null}
+            {lifePathNumber=== 5 ? <img src="/images/foto-numere/5.jpg" alt=""/> : null}
+            {lifePathNumber=== 6 ? <img src="/images/foto-numere/6.jpg" alt=""/> : null}
+            {lifePathNumber=== 7 ? <img src="/images/foto-numere/7.jpg" alt=""/> : null}
+            {lifePathNumber=== 8 ? <img src="/images/foto-numere/8.jpg" alt=""/> : null}
+            {lifePathNumber=== 9 ? <img src="/images/foto-numere/9.jpg" alt=""/> : null}
+            {lifePathNumber=== 11 ? <img src="/images/foto-numere/11.jpg" alt=""/> : null}
+            {lifePathNumber=== 22 ? <img src="/images/foto-numere/12.jpg" alt=""/> : null}
+            {lifePathNumber=== 33 ? <img src="/images/foto-numere/13.jpg" alt=""/> : null}  
           </>
         )}
      
