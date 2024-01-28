@@ -1,12 +1,13 @@
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 
- const logo='/images/logooo.png'
+ const logo='/logo4.jpeg'
 
 export default function Logo (){
   return (
     <Link href="/" passHref className="cursor-pointer">
-       <span className="text-lg pt-1 font-bold">Shopify + Next.js</span>
+       {/* <span className="text-lg pt-1 font-bold">Shopify + Next.js</span> */}
+      <img className="logo" src={logo}/>
     </Link>
   )
 }

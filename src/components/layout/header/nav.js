@@ -35,7 +35,7 @@ const Nav = ({headerMenus, header, slug}) => {
     <MaxWidthWrapper>
           {/* Mobile */}
           <div className='md:hidden'>
-            <div className='flex items-center h-10 pt-4 justify-between '>
+            <div className='flex items-center h-20 pt-4 justify-between '>
               <Logo />
               <MobileMenu headerMenus={headerMenus}/>
             </div>
@@ -46,7 +46,7 @@ const Nav = ({headerMenus, header, slug}) => {
 
           {/* tablet */}
           <div className='hidden md:block lg:hidden'>
-            <div className='flex items-center h-20 justify-between '>
+            <div className='flex items-center h-[90px] justify-between '>
               <Logo />
               <NavSearch/>
               <MobileMenu headerMenus={headerMenus}/>
@@ -55,17 +55,17 @@ const Nav = ({headerMenus, header, slug}) => {
           {/* end tablet */}
 
           {/* Desktop */}
-          <div className='hidden lg:flex md:h-16 items-center justify-between gap-2'>
+          <div className='hidden lg:flex md:h-[80px] items-center justify-between gap-2'>
             <Logo />
             <NavSearch/>
 
           </div>
-        </MaxWidthWrapper>
-        <div className='hidden lg:block bg-[#fff] border-borderColor'>
-          <MaxWidthWrapper>
-            <NavBarLink headerMenus={headerMenus}/>
           </MaxWidthWrapper>
-        </div>
+          <div className='hidden lg:block bg-[#fff] border-borderColor'>
+            <MaxWidthWrapper>
+              <NavBarLink headerMenus={headerMenus}/>
+            </MaxWidthWrapper>
+          </div>
         {/* end descktop */}
     </nav>
     </Box>
