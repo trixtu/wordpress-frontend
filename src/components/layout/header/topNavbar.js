@@ -23,7 +23,7 @@ export default function TopNavBar({socialLinks}) {
       }}
     >
 
-      <Container maxW={'1200px'} py={1}>
+      <Container maxW={'1150px'} py={1}>
         <div className='flex justify-between items-center'>
           <div >
           {! isEmpty(socialLinks) && isArray(socialLinks) ? (
