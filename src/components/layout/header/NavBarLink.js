@@ -51,6 +51,7 @@ const NavBarLink = ({headerMenus}) => {
               <Box 
                 _hover={{textDecoration:'none',bgColor:'#fafafa'}}
                 bgColor={colorMenu === index && '#fafafa'}
+                
                 px={3}
                 py={1}
               >

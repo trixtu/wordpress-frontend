@@ -23,7 +23,6 @@ const Page = ( {data} ) => {
 
 	
 	return (
-
 		<Layout data={data}>
 			<div>
 				<Breadcrumb marginY={2} spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>

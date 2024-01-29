@@ -14,8 +14,6 @@ export default function Home({data}) {
 
   return (
 		<Layout data={data}>
-      
-
       <SliderHome slider={data} />
       {/* <NewProducts
         products={products}
