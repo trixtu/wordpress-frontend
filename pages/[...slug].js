@@ -53,7 +53,9 @@ export async function getStaticProps( {params} ) {
 	const defaultProps = {
 		props: {
 			data: data || {}
-		}
+		},
+
+		revalidate: 1,
 	};
 
 	return handleRedirectsAndReturnData( defaultProps, data, errors, 'page' );
