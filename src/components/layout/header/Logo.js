@@ -1,7 +1,7 @@
 import { Image } from "@chakra-ui/react";
 import Link from "next/link";
 
- const logo='/logo4.jpeg'
+ const logo='/logo5.png'
 
 export default function Logo (){
   return (

@@ -59,7 +59,7 @@ const Nav = ({headerMenus, header, slug}) => {
           <div className='hidden lg:flex md:h-[80px] items-center justify-between gap-2'>
             <Logo />
             <NavSearch/>
-            <FaUser size={24}/>
+            
           </div>
           </MaxWidthWrapper>
           <div className='hidden lg:block bg-[#fff] border-borderColor'>
