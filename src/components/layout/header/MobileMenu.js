@@ -66,6 +66,7 @@ const MobileMenu = ({headerMenus}) => {
                         _hover={{ textDecoration: "none",textColor:"#a9d0c6" }}
                       >
                         {subMenuItem?.node?.label}
+                        
                       </Link>
                     ))}
                   </Flex>
