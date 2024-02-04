@@ -12,6 +12,7 @@ export default function TopNavBar({socialLinks}) {
     return null;
   }
 
+  console.log(socialLinks)
   return (
     
     <div  className="text-[#fff6c9] bg-cover top-navbar hidden md:block"
@@ -30,9 +31,9 @@ export default function TopNavBar({socialLinks}) {
                   <ul className='social-link flex items-center'>
                     {socialLinks.map((link,index)=>(
                       <li key={index} className='mr-4'>
-                        <a  href={link.iconUrl} >
+                        <Link href={link.iconUrl} >
                           {getIconComponentByName(link.iconName)}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
