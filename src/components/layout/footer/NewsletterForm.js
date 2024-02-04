@@ -64,7 +64,7 @@ const NewsletterForm = ( { status, message, onValidated }) => {
 
   return (
     <div>
-      <h3 className="mb-3 uppercase font-bold ">Subscribe to newsletter</h3>
+      <h4 className="mb-3 uppercase font-bold text-lg" >Abonează-te la newsletter</h4>
       <div className="flex newsletter-input-fields">
         <div className="mc-field-group">
           <input

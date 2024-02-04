@@ -9,6 +9,13 @@ import {isEmpty} from 'lodash';
 import { sanitize } from '@/src/utils/miscellaneous';
 import { Container } from '@chakra-ui/react';
 
+import { Montserrat } from "@next/font/google"
+
+const montserrat = Montserrat({
+  subsets:['latin'],
+  display:'swap',
+})
+
 const Layout = ( {data, isPost, children} ) => {
 	const {page, post, posts, header, footer, headerMenu, footerMenu} = data || {};
 
@@ -22,7 +29,7 @@ const Layout = ( {data, isPost, children} ) => {
   
 
 	return (
-		<div>
+		<div className={montserrat.className}>
 			<Seo seo={seo} uri={uri}/>
 			<Head>
 				<link rel="shortcut icon" href={header?.favicon}/>

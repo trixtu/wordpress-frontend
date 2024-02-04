@@ -11,6 +11,7 @@ export const GET_POST = gql`
       ${HeaderFooter}
 	  post: postBy(uri: $uri) {
 	    id
+			databaseId
 	    title
 	    content
 	    slug

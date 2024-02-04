@@ -146,6 +146,15 @@ img.logo {
   margin-bottom: 0;
 }
 
+@layer utilities {
+  .post-content p {
+    @apply pb-4;
+  }
+  .post-content a{
+    @apply underline text-blue-300
+  }
+}
+
 // .swiper {
 //   width: 100%;
 //   height: 100%;

@@ -142,4 +142,13 @@ img.logo {
 
 .top-navbar p {
   margin-bottom: 0;
+}
+
+@layer utilities {
+  .post-content p {
+    @apply pb-4;
+  }
+  .post-content a {
+    @apply underline text-blue-300;
+  }
 }/*# sourceMappingURL=styles.css.map */

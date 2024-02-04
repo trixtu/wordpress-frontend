@@ -1,5 +1,7 @@
 
+import { headers } from '@/next.config';
 import { ApolloClient, InMemoryCache, createHttpLink} from '@apollo/client';
+
 
 const defaultOptions = {
 	watchQuery: {

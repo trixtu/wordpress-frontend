@@ -14,7 +14,7 @@ import Image from '../../components/image';
 import { Box, Button, Card, CardBody, CardFooter, Flex, Heading, Link, Text } from '@chakra-ui/react';
 
 const SliderBlog = ({blogs}) => {
-console.log(blogs)
+
 if(isEmpty(blogs)){
   return null;
 }
@@ -45,10 +45,12 @@ const breakpoints = {
         freeMode={true}
         pagination={{
           clickable: true,
+      
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[FreeMode, Pagination,Navigation]}
         className='mySwiper'
         breakpoints={breakpoints}
+        
       
       >
         

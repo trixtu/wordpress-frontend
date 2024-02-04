@@ -9,8 +9,14 @@ import { sanitize } from '@/src/utils/miscellaneous';
 import { GET_POST_SLUGS } from '@/src/queries/posts/get-posts';
 import { GET_POST } from '@/src/queries/posts/get-post';
 import { FALLBACK, handleRedirectsAndReturnData } from '@/src/utils/slug';
+import CommentForm from '@/src/components/CommentForm';
+import { getComments } from '@/src/lib/comments';
+import { Alert, AlertIcon } from '@chakra-ui/react';
+import { LuMessagesSquare } from "react-icons/lu";
+import Message from '@/src/components/ui/Message';
 
-const Post = ( { data } ) => {
+
+const Post = ( { data, comments, commentCount} ) => {
 	const router = useRouter();
 
 	// If the page is not yet generated, this will be displayed
@@ -18,10 +24,26 @@ const Post = ( { data } ) => {
 	if ( router.isFallback ) {
 		return <div>Loading...</div>;
 	}
-
+console.log('post',commentCount)
 	return (
 		<Layout data={data} isPost>
 			<div dangerouslySetInnerHTML={{__html: sanitize( data?.post?.content ?? {} )}}/>
+
+			
+
+			<div className='mb-4'>
+				<CommentForm postId={data?.post?.databaseId}/>
+			</div>
+			<div className='my-4'> 
+				<Alert backgroundColor={'#fac482'} gap={4}>
+				<LuMessagesSquare fontSize={22}/>
+				Message:<strong>{commentCount}</strong>
+				</Alert>
+
+			</div>
+			<div>
+				<Message comments={comments}/>
+			</div>
 		</Layout>
 	);
 };
@@ -36,9 +58,15 @@ export async function getStaticProps( { params } ) {
 		},
 	} );
 
+	const {comments, commentCount} = await getComments(params?.slug);
+
+
+
 	const defaultProps = {
 		props: {
-			data: data || {}
+			data: data || {},
+			comments,
+			commentCount
 		},
 		/**
          * Revalidate means that if a new request comes to server, then every 1 sec it will check
