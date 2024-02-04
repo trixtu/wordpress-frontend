@@ -1,4 +1,4 @@
-import { Button, Heading, Input, InputGroup, InputLeftAddon, InputLeftElement, Text, Textarea } from '@chakra-ui/react';
+import { Alert, AlertIcon, Button, Heading, Input, InputGroup, InputLeftAddon, InputLeftElement, Text, Textarea } from '@chakra-ui/react';
 import React, { useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -8,13 +8,14 @@ import { FaPencil } from "react-icons/fa6";
 export default function CommentForm({postId}) {
   const [submitStatus, setSubmitStatus] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
-  const [alertColor, setAlertColor] = useState('');
+  const [alertColor, setAlertColor] = useState('error');
 
+  console.log(alertColor)
   const  handleSubmit = async function(event){
     event.preventDefault();
     setSubmitStatus(true);
     setResponseMessage('Your commenting is being submitted...');
-    setAlertColor('bg-yellow-500');
+    setAlertColor('warning');
 
 
     let data = {
@@ -39,10 +40,10 @@ export default function CommentForm({postId}) {
         setResponseMessage(result.message);
 
         if(response.ok) {
-            setAlertColor('bg-green-500');
+            setAlertColor('success');
         }
         else {
-            setAlertColor('bg-red-500');
+            setAlertColor('error');
         }
   }
   return (
@@ -72,9 +73,10 @@ export default function CommentForm({postId}) {
 
     {
         submitStatus && 
-        <div className={`${alertColor} py-2 px-4 mt-4 text-slate-100 rounded-md`}>
+        <Alert marginY={2} status={`${alertColor}`}>
+          <AlertIcon />
             {responseMessage}
-        </div>
+        </Alert>
     }
     </>
 )

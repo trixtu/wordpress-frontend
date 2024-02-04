@@ -35,9 +35,9 @@ console.log('post',commentCount)
 				<CommentForm postId={data?.post?.databaseId}/>
 			</div>
 			<div className='my-4'> 
-				<Alert backgroundColor={'#fac482'} gap={4}>
-				<LuMessagesSquare fontSize={22}/>
-				Message:<strong>{commentCount}</strong>
+				<Alert backgroundColor={'#fac482'} gap={4} maxW={'sm'}>
+					<LuMessagesSquare fontSize={22}/>
+					Message:<strong>{commentCount}</strong>
 				</Alert>
 
 			</div>
