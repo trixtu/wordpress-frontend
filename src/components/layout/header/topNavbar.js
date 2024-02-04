@@ -1,10 +1,11 @@
 
-import Link from 'next/link'
 import React from 'react'
 import { Email, Facebook, Instagram, Youtube } from '../../icons'
 import { isArray, isEmpty } from 'lodash';
 import { getIconComponentByName } from '@/src/utils/icons-map';
-import { Container } from '@chakra-ui/react';
+import { Button, Container } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function TopNavBar({socialLinks}) {
 
@@ -12,7 +13,8 @@ export default function TopNavBar({socialLinks}) {
     return null;
   }
 
-  console.log(socialLinks)
+  const router = useRouter()
+  
   return (
     
     <div  className="text-[#fff6c9] bg-cover top-navbar hidden md:block"
