@@ -35,7 +35,7 @@ export default function ContactPage({data}) {
         <Grid templateColumns='repeat(12, 1fr)'>
           <GridItem colSpan={{base:0, md:3}}></GridItem>
           <GridItem colSpan={{base:12, md:6}}>
-            <Box padding={20} border={'1px'} borderColor={'#f2f2f2'} shadow={'md'}>
+            <Box padding={{base:5, md:5, lg:20}} border={'1px'} borderColor={'#f2f2f2'} shadow={'md'}>
               <Heading fontWeight={500} fontSize={24} textAlign={'center'}>
                 Contactează-mă
               </Heading>

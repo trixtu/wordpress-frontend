@@ -1,10 +1,18 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Button, Container } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { useRouter } from 'next/navigation'
+
+
+
 
 export default function SliderHome({ slider }) {
+
+  const router = useRouter()
+
+ 
   return (
       <div className='border' >
         <div className="md:flex items-center justify-between">
@@ -22,25 +30,37 @@ export default function SliderHome({ slider }) {
             <div className=" col-span-2 w-full">
               <div className="flex flex-col items-left justify-center gap-4 p-2">
                 <Button
-                  href={'/calculator-numerologic/cifra-destinului'}
+                  size={'sm'}
+                  boxShadow={'md'}
+                  fontSize={12}
+                  textTransform={'uppercase'}
+                  onClick={()=>router.push('/cifra-destinului')}
                   colorScheme={'yellow'}
+                  rightIcon={<ChevronRightIcon fontSize={20}/>}
                 >
                   Calculator numerologic
-                  <ChevronRightIcon fontSize={24}/>
                 </Button>
                 <Button
-                  href={'/numerologie/ce-este-numerologia'}
+                  size={'sm'}
+                  boxShadow={'md'}
+                  fontSize={12}
+                  textTransform={'uppercase'}
+                  onClick={()=>router.push('/ce-este-numerologia')}
                   colorScheme={'yellow'}
+                  rightIcon={ <ChevronRightIcon fontSize={20}/>}
                 >
                   Numerologie
-                  <ChevronRightIcon fontSize={24}/>
                 </Button>
                 <Button
-                  href={'/consiliere/cui-se-adreseaza'}
+                  size={'sm'}
+                  boxShadow={'md'}
+                  fontSize={12}
+                  textTransform={'uppercase'}
+                  onClick={()=>router.push('/ce-este-si-cui-se-adreseaza')}
                   colorScheme={'yellow'}
+                  rightIcon={<ChevronRightIcon  fontSize={20}/>}
                 >
-                  Consiliere pentru dezvoltare personala
-                  <ChevronRightIcon  fontSize={24}/>
+                  Consiliere pentru dezvoltare personala 
                 </Button>
               </div>
             </div>

@@ -1,43 +1,40 @@
+@charset "UTF-8";
+@import 'nprogress/nprogress.css';
+@import '~@wordpress/block-library/build-style/style.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "libraries/nprogress";
-@import '~@wordpress/block-library/build-style/style.css';
+#nprogress .bar {
+  background-color: #fff;
+}
 
 h1 {
   font-size: 2.5em;
-  
   /* Alte stilizări pentru h1 */
 }
 
 h2 {
   font-size: 2em;
- 
   /* Alte stilizări pentru h2 */
 }
 
 h3 {
   font-size: 1.8em;
-  
   /* Alte stilizări pentru h3 */
 }
 
 h4 {
   font-size: 1.5em;
-  
   /* Alte stilizări pentru h4 */
 }
 
 h5 {
   font-size: 1.2em;
- 
   /* Alte stilizări pentru h5 */
 }
 
 h6 {
   font-size: 1em;
-  
   /* Alte stilizări pentru h6 */
 }
 
@@ -58,7 +55,7 @@ p.paragraf-mare {
 }
 
 body {
-  font-family: 'Arial', sans-serif; /* Familie de fonturi */
+  font-family: "Arial", sans-serif; /* Familie de fonturi */
   font-size: 16px; /* Dimensiunea textului implicită */
   line-height: 1.6; /* Înălțimea liniei */
   color: #333; /* Culoarea textului */
@@ -66,18 +63,19 @@ body {
   margin: 0; /* Elimină marginile implicite ale body-ului */
   padding: 0; /* Elimină padding-ul implicite ale body-ului */
 }
-/* Alte stiluri pentru paragrafe pot fi adăugate după necesități */
 
-body{
+/* Alte stiluri pentru paragrafe pot fi adăugate după necesități */
+body {
   margin: 0;
 }
 
-.social-link svg{
+.social-link svg {
   width: 24px;
 }
-.top-navbar svg{
+
+.top-navbar svg {
   width: 16px;
-  fill:#fff6c9;
+  fill: #fff6c9;
 }
 
 .header {
@@ -92,7 +90,7 @@ body{
   flex-wrap: wrap;
 }
 
-.nav__submenu{
+.nav__submenu {
   display: none;
   border-top: 3px solid #fac482;
 }
@@ -110,8 +108,8 @@ body{
   width: 100%;
 }
 
-.wp-block-image img{
-  display:inline-block;
+.wp-block-image img {
+  display: inline-block;
 }
 
 ul.list-wp {
@@ -133,38 +131,15 @@ blockquote {
   margin: 20px 0;
   /* Alte proprietăți CSS pentru Pullquote... */
 }
-.wp-block-image{
-  img{
-    width: 10px;
-  }
+
+.wp-block-image img {
+  width: 10px;
 }
 
 img.logo {
   height: 180px;
 }
+
 .top-navbar p {
   margin-bottom: 0;
-}
-
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-//   background: #fff;
-
-//   /* Center slide text vertically */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
+}/*# sourceMappingURL=styles.css.map */

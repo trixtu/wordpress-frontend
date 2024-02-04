@@ -8,6 +8,7 @@ const Posts = ( {posts} ) => {
 		return null;
 	}
 
+	console.log(posts)
 	return (
 		<div className="flex flex-wrap -mb-4">
 			{

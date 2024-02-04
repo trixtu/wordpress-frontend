@@ -51,7 +51,7 @@ const MobileMenu = ({headerMenus}) => {
                     {item?.node?.label} {openSubmenuIndex === index ? <FaChevronUp /> : <FaChevronDown />}
                   </Flex>
                 ) : (
-                  <Link px={4} py={2} textTransform={'uppercase'}  href="/"   _hover={{ textDecoration: "none" }}>
+                  <Link px={4} py={2} textTransform={'uppercase'}  href={item?.node?.path}   _hover={{ textDecoration: "none" }}>
                     {item?.node?.label}
                   </Link>
                 )}

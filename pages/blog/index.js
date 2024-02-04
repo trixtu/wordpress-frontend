@@ -10,7 +10,7 @@ import { handleRedirectsAndReturnData } from "@/src/utils/slug";
 
 const Blog = ( { data } ) => {
 	const pagesCount = totalPagesCount( data?.posts?.pageInfo?.offsetPagination?.total ?? 0 );
-	console.log(data)
+
 	return (
 		<Layout data={data}>
 			<Posts posts={data?.posts?.edges ?? []}/>
