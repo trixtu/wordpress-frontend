@@ -244,7 +244,6 @@ export default function DateOfBirth() {
 
         <Button
           colorScheme={'green'}
-          isDisabled={selectedTag && selectedMonth && selectedYear ? false : true}
           onClick={handleCalculate}
         >
           Calculeaza
