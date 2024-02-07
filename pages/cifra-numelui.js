@@ -128,7 +128,7 @@ export default function CifraNumelui({data}) {
         <Heading as={'h1'} fontSize={'2xl'} marginBottom={2}>
           Cifra numelui
         </Heading>
-        <Box bg={'#e5e5e5'} padding={4} >
+        <Box bg={'#e5e5e5'} padding={4}  maxW={'lg'} >
           
             <FormControl marginBottom={4}>
               <FormLabel>Introdu numele tau</FormLabel>

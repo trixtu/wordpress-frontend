@@ -137,7 +137,7 @@ blockquote {
 }
 
 img.logo {
-  height: 65px;
+  height: 60px;
 }
 
 .top-navbar p {
@@ -151,4 +151,7 @@ img.logo {
   .post-content a {
     @apply underline text-blue-300;
   }
+}
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -5px;
 }/*# sourceMappingURL=styles.css.map */

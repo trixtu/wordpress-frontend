@@ -71,9 +71,9 @@ const years = Array.from(
 export default function MatriceaNumerologica({data}) {
   const router = useRouter()
 
-  const [selectedTag, setSelectedTag] = React.useState('')
-  const [selectedMonth, setSelectedMonth] = React.useState('')
-  const [selectedYear, setSelectedYear] = React.useState('')
+  const [selectedTag, setSelectedTag] = React.useState(1)
+  const [selectedMonth, setSelectedMonth] = React.useState(1)
+  const [selectedYear, setSelectedYear] = React.useState(2024)
   const [matriceUnu, setMatriceUnu] = useState(null)
   const [matriceDoi, setMatriceDoi] = useState(null)
   const [matriceTrei, setMatriceTrei] = useState(null)

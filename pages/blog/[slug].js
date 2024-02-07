@@ -24,7 +24,7 @@ const Post = ( { data, comments, commentCount} ) => {
 	if ( router.isFallback ) {
 		return <div>Loading...</div>;
 	}
-console.log('post',commentCount)
+	
 	return (
 		<Layout data={data} isPost>
 			<div dangerouslySetInnerHTML={{__html: sanitize( data?.post?.content ?? {} )}}/>
