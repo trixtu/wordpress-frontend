@@ -17,62 +17,62 @@ const CifraDestinului = ({data}) => {
   const numbers = [
     {
       name: 'one',
-      href: '/numerologie/1',
+      href: '/cifra-destinului-1',
       value: 1,
     },
     {
       name: 'two',
-      href: '/numerologie/2',
+      href: '/cifra-destinului-2',
       value: 2,
     },
     {
       name: 'three',
-      href: '/numerologie/3',
+      href: '/cifra-destinului-3',
       value: 3,
     },
     {
       name: 'four',
-      href: '/numerologie/4',
+      href: '/cifra-destinului-4',
       value: 4,
     },
     {
       name: 'five',
-      href: '/numerologie/5',
+      href: '/cifra-destinului-5',
       value: 5,
     },
     {
       name: 'six',
-      href: '/numerologie/6',
+      href: '/cifra-destinului-6',
       value: 6,
     },
     {
       name: 'seven',
-      href: '/numerologie/7',
+      href: '/cifra-destinului-7',
       value: 7,
     },
     {
       name: 'eight',
-      href: '/numerologie/8',
+      href: '/cifra-destinului-8',
       value: 8,
     },
     {
       name: 'nine',
-      href: '/numerologie/9',
+      href: '/cifra-destinului-9',
       value: 9,
     },
     {
       name: 'eleven',
-      href: '/numerologie/11',
+      href: '/cifra-destinului-11',
       value: 11,
     },
     {
       name: 'twenty-two',
-      href: '/numerologie/22',
+      href: '/cifra-destinului-22',
       value: 22,
     },
     {
       name: 'thirty-three',
-      href: '/numerologie/33',
+      href: '/cifra-destinului-33',
       value: 33,
     },
   ]
@@ -108,7 +108,7 @@ const CifraDestinului = ({data}) => {
               {numbers.map((number, index) => (
                 <div>
                   <Link
-                    href={'#'}
+                    href={number.href}
                     className="flex items-center justify-center"
                   >
                     <div
