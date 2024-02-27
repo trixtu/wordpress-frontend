@@ -16,12 +16,12 @@ const initValues = {
   telefon:'',
   subject:'Programare',
   message:'',
-  tipProgramare:'',
+  tipProgramare:'Doresc Analiza numerologica (prezentare scrisa)',
 }
 
 const initState = {values:initValues}
 
-export default function ProgrameazaTe({ data }){
+export default function DorescAnalizaNumerologica({ data }){
   const [state,setState] = useState(initState)
   const [touched,setTouched] = useState({})
 

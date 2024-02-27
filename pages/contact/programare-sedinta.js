@@ -79,7 +79,7 @@ export default function ProgramareOSedinta({data}){
             {error}
           </Alert>
         )}
-        <Text  mb={1}>Completează formularul de mai jos <strong>si te voi contacta pentru a stabili impreuna detaliile pentru intalnirea noastra.</strong></Text>
+        <Text  mb={1}>Completează formularul de mai jos și te voi contacta pentru a stabili împreună detaliile pentru întâlnirea noastră</Text>
         <Text mb={2}>
           <strong>1 ȘEDINȚĂ</strong><br/>
           1 ședință are durata de 50 minute și se poate desfășura online (telefonic sau pe zoom).<br/>

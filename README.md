@@ -1,1 +1,11 @@
 # wordpress-frontend-ionela
+
+
+cert_lSlAWB1iAI64VIVxayChQbYk
+
+cert_zl9F91Ycy6XHL8FiVY52V09e
+
+cert_INfb3NzJLlcGpRfoZO3XZ4Rl
+
+cert_2tyVRKddXqpCyx6ACQdglgcc
+

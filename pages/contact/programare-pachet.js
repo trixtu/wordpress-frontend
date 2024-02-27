@@ -79,7 +79,7 @@ export default function ProgramarePachet({data}){
             {error}
           </Alert>
         )}
-        <Text variant="subtitle1" mb={1}>Completează formularul de mai jos <strong>si te voi contacta pentru a stabili impreuna detaliile pentru intalnirea noastra.</strong></Text>
+        <Text variant="subtitle1" mb={1}>Completează formularul de mai jos și te voi contacta pentru a stabili împreună detaliile pentru întâlnirea noastră</Text>
         <Text mb={2}>
           <strong>PACHET DE 4 + 2 ȘEDINȚE </strong><br/>
           Durata fiecărei ședințe este de 50 minute. Acest pachet conține 2 întâlniri gratuite la 4 ședințe achitate în avans. 
