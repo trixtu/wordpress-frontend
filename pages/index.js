@@ -9,7 +9,7 @@ import { handleRedirectsAndReturnData } from "@/src/utils/slug";
 
 export default function Home({data}) {
 
-console.log(data)
+
   return (
 		<Layout data={data}>
       <SliderHome slider={data} />

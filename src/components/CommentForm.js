@@ -10,7 +10,6 @@ export default function CommentForm({postId}) {
   const [responseMessage, setResponseMessage] = useState('');
   const [alertColor, setAlertColor] = useState('error');
 
-  console.log(alertColor)
   const  handleSubmit = async function(event){
     event.preventDefault();
     setSubmitStatus(true);
@@ -34,7 +33,7 @@ export default function CommentForm({postId}) {
 
     const result = await response.json();
 
-        console.log(result);
+      
 
         setSubmitStatus(true);
         setResponseMessage(result.message);

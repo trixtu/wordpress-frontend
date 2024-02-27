@@ -3,7 +3,7 @@ import Date from './Date'
 import { Avatar } from '@chakra-ui/react'
 
 const Message = ({comments}) => {
-  console.log(comments)
+
   return (
    
 

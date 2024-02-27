@@ -11,22 +11,25 @@ import { GET_POST } from '@/src/queries/posts/get-post';
 import { FALLBACK, handleRedirectsAndReturnData } from '@/src/utils/slug';
 import CommentForm from '@/src/components/CommentForm';
 import { getComments } from '@/src/lib/comments';
-import { Alert, AlertIcon } from '@chakra-ui/react';
+import { Alert, AlertIcon, Heading } from '@chakra-ui/react';
 import { LuMessagesSquare } from "react-icons/lu";
 import Message from '@/src/components/ui/Message';
 
 
 const Post = ( { data, comments, commentCount} ) => {
 	const router = useRouter();
+	const {page, post, posts, header, footer, headerMenu, footerMenu} = data || {};
 
 	// If the page is not yet generated, this will be displayed
 	// initially until getStaticProps() finishes running
 	if ( router.isFallback ) {
 		return <div>Loading...</div>;
 	}
-	
+	console.log(post.title)
 	return (
 		<Layout data={data} isPost>
+
+			<Heading as={'h2'}>{post?.title}</Heading>
 			<div dangerouslySetInnerHTML={{__html: sanitize( data?.post?.content ?? {} )}}/>
 
 			

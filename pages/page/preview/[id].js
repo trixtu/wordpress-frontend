@@ -9,6 +9,7 @@ import {
 } from '../../../src/utils/redirects';
 
 const PagePreview = ( { data } ) => {
+	
 	return (
 		<Layout data={data}>
 			<div dangerouslySetInnerHTML={{__html: sanitize( data?.page?.content ?? {} )}}/>
