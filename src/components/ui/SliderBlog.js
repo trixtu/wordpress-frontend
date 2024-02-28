@@ -36,6 +36,8 @@ const breakpoints = {
     spaceBetween: 30,
   },
 };
+
+console.log(blogs)
   return (
     <>
       <Heading as={'h2'} textAlign={'center'} padding={4}>Materiale Informative</Heading>
@@ -61,7 +63,7 @@ const breakpoints = {
             <Image { ...blog?.node.featuredImage?.node } width="400" height="305" layout="fill" containerClassNames="w-96 sm:-w-[600px] md:w-[400px] h-56 sm:h-338px md:h-225px" title={blog?.node.title ?? ''}/>
          
             <Flex justifyContent={'space-between'} padding={2}>
-              <Button variant='outline' border={'none'} _hover={'none'} leftIcon={<FaUser fontSize={'18px'} color='#fac482'/>} textColor={'#888787'} fontWeight={'300'}>{`${blog?.node?.author?.node?.lastName}${' '}${blog?.node?.author?.node?.firstName}`}</Button>
+              <Button variant='outline' border={'none'} _hover={'none'} leftIcon={<FaUser fontSize={'18px'} color='#fac482'/>} textColor={'#888787'} fontWeight={'300'}>{`${blog?.node?.author?.node?.name}`}</Button>
               <Button variant='outline' border={'none'} _hover={'none'} leftIcon={<BiSolidChat fontSize={'18px'} color='#fac482'/>} textColor={'#888787'} fontWeight={'300'}>{`Comments${' '}${blog?.node?.commentCount === null ? 0 : blog?.node?.commentCount}`}</Button>
             </Flex>
 
