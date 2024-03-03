@@ -4,6 +4,7 @@ import GoogleAnalytics from "@/src/components/GoogleAnalytics";
 import "@/src/styles/styles.scss";
 import { ApolloProvider } from "@apollo/client";
 import { ChakraProvider } from "@chakra-ui/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 import Router from 'next/router';
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }) {
     <ApolloProvider client={client}>
       <ChakraProvider>
           <GoogleAnalytics />
+          <SpeedInsights />
           <Component {...pageProps} />
       </ChakraProvider>
     </ApolloProvider>
