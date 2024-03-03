@@ -72,7 +72,7 @@ const Footer = ({footer, footerMenus}) => {
               <Link className="hover:underline" href={'#'}>
                 Politica cookie
               </Link>
-              <Link className="hover:underline" href={'#'}>
+              <Link className="hover:underline" href={'/politica-de-confidentialitate-2'}>
                 Politica de confidențialitate
               </Link>
               <Link className="hover:underline" href={'#'}>
@@ -91,43 +91,3 @@ const Footer = ({footer, footerMenus}) => {
 }
 
 export default Footer
-
-
-{/* <footer
-     
- >
-      
-
-      <Container>
-        <Grid container spacing={2} paddingBottom={4}>
-          <Grid item xs={12} md={4}>
-            <NewsletterSubscribe />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <ContactMe />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <TrimiteMesaj />
-          </Grid>
-        </Grid>
-        <Divider />
-        <Grid container spacing={2} paddingBottom={4} marginBottom={2}>
-          <Grid item xs={12} md={11}>
-            <div className="flex gap-4">
-              <Link className="hover:underline" href={'#'}>
-                Politica cookie
-              </Link>
-              <Link className="hover:underline" href={'#'}>
-                Politica de confidențialitate
-              </Link>
-              <Link className="hover:underline" href={'#'}>
-                Termeni și condiții
-              </Link>
-            </div>
-          </Grid>
-          <Grid item xs={12} md={1} textAlign={'center'}>
-            &#169; trixTU
-          </Grid>
-        </Grid>
-      </Container>
-    </footer> */}
