@@ -1,5 +1,6 @@
 
 import client from "@/src/apollo/client";
+import GoogleAnalytics from "@/src/components/GoogleAnalytics";
 import "@/src/styles/styles.scss";
 import { ApolloProvider } from "@apollo/client";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }) {
     
     <ApolloProvider client={client}>
       <ChakraProvider>
+          <GoogleAnalytics />
           <Component {...pageProps} />
       </ChakraProvider>
     </ApolloProvider>
