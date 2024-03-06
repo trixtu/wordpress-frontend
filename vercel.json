@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/numerologie/consultatii-numerologice", "destination": "/consultatii-numerologice-11" }
+  ]
+}
