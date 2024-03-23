@@ -7,8 +7,7 @@ const Posts = ( {posts} ) => {
 	if ( isEmpty( posts ) && ! isArray( posts ) ) {
 		return null;
 	}
-
-	console.log(posts)
+	
 	return (
 		<div className="flex flex-wrap -mb-4">
 			{
