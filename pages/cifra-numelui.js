@@ -108,6 +108,7 @@ export default function CifraNumelui({data}) {
   return (
     <>
       <Head>
+        <meta name="robots" content="index, follow" />
         <title>
           Calculator cifra nume, introdu nume, prenume si calculeaza |
           Numerologie

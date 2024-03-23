@@ -32,6 +32,7 @@ const Layout = ( {data, isPost, children} ) => {
 		<div className={montserrat.className}>
 			<Seo seo={seo} uri={uri}/>
 			<Head>
+				<meta name="robots" content="index, follow" />
 				<link rel="shortcut icon" href={header?.favicon}/>
 				{seo?.schemaDetails ? (
 					<script
