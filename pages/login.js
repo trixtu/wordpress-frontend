@@ -53,7 +53,7 @@ const Login = ( { data } ) => {
 				if (success) {
 					const previewUrl = getPreviewRedirectUrl(postType, previewPostId);
 					router.push(previewUrl);
-					console.log('first')
+		
 				}
 				return data_1?.data?.success;
 			} catch {

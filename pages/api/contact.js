@@ -31,7 +31,7 @@ const generateEmailContent = (data) => {
 }
 
 const handler = async (req, res) => {
-  console.log(req.body)
+ 
   if (req.method === 'POST') {
     const data = req.body
     if (!data.name || !data.email) {

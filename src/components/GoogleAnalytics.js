@@ -6,7 +6,6 @@ import * as gtag from "@/src/utils/gtag"
 const GoogleAnalytics = () => {
 
     //You can show in the console the GA_TRACKING_ID to confirm
-    console.log(gtag.GA_TRACKING_ID)
 
     return (
         <>

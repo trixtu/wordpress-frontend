@@ -25,7 +25,7 @@ const Post = ( { data, comments, commentCount} ) => {
 	if ( router.isFallback ) {
 		return <div>Loading...</div>;
 	}
-	console.log(post.title)
+	
 	return (
 		<Layout data={data} isPost>
 

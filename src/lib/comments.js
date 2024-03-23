@@ -57,8 +57,6 @@ export async function getComments(slug) {
   const resJson = await graphqlRequest(query);
   const post = resJson.data.post;
 
-  console.log(JSON.stringify(post));
-
   return {
      comments: post.comments,
      commentCount: post.commentCount,

@@ -68,7 +68,6 @@ export default function CifraNumelui({data}) {
         0
       )
 
-      console.log(firstSumPrenume)
       if (firstSumPrenume > 9) {
         const secondSumPrenumeArr = String(firstSumPrenume)
           .split('')
