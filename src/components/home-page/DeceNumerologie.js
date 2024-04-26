@@ -43,7 +43,7 @@ export default function DeceNumerologie(){
               width={'100%'}
               height={200}
               objectFit='cover'
-              src='/images/numaarul-cosmic.jpg'
+              src='/images/numarul-cosmic.jpg'
               alt=''
             />
             <Heading position={'absolute'} width={'100%'} top={'70%'} textAlign={'center'} color={'#fff'} as={'h4'} fontSize={'22px'} fontWeight={'500'}>Numărul cosmic</Heading>
