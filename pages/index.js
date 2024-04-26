@@ -1,4 +1,5 @@
 import client from "@/src/apollo/client";
+import DeceNumerologie from "@/src/components/home-page/DeceNumerologie";
 import Layout from "@/src/components/layout";
 import SliderHome from "@/src/components/ui/Slider";
 import SliderBlog from "@/src/components/ui/SliderBlog";
@@ -22,10 +23,10 @@ export default function Home({data}) {
       /> */}
       {/* <HomePageUnu /> */}
 			{ data?.page?.content ? <div className="mt-4" dangerouslySetInnerHTML={{__html: sanitize( data?.page?.content ?? {} )}}/> : null }
-
+			<DeceNumerologie />
 			<SliderBlog blogs={data?.blogs?.edges}/>
 			<div class="fixed right-0 bottom-0 p-4 z-6">
-				<Tooltip hasArrow placement='auto-end' label='Ai nevoie de ajutor?' bg='#fff' color='black'>
+				<Tooltip hasArrow placement='auto-end' label='Ai nevoie de ajutor?' bg='gray.100' color='black' p={4}>
 					<a href="https://wa.me/40757580129?text=" target="_blank">
 						<img src="/images/WhatsApp.png" width={"60"} alt=""/>
 					</a>
