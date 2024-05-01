@@ -14,9 +14,9 @@ const Footer = ({footer, footerMenus}) => {
     setMount(true);
   },[])
   
-  if(isEmpty(footerMenus)){
-    return null;
-  }
+  // if(isEmpty(footerMenus)){
+  //   return null;
+  // }
   
   return (
     <footer  
