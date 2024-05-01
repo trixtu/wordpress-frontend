@@ -9,7 +9,9 @@ import {isEmpty} from 'lodash';
 import { sanitize } from '@/src/utils/miscellaneous';
 import { Container } from '@chakra-ui/react';
 
-import { Montserrat } from "@next/font/google"
+import { Montserrat } from "@next/font/google";
+import { AppProvider } from '../context';
+
 
 const montserrat = Montserrat({
   subsets:['latin'],
@@ -29,25 +31,27 @@ const Layout = ( {data, isPost, children} ) => {
   
 
 	return (
-		<div className={montserrat.className}>
-			<Seo seo={seo} uri={uri}/>
-			<Head>
-				<link rel="shortcut icon" href={header?.favicon}/>
-				{seo?.schemaDetails ? (
-					<script
-						type='application/ld+json'
-						className='yoast-schema-graph'
-						key='yoastSchema'
-						dangerouslySetInnerHTML={{__html: sanitize  ( seo.schemaDetails )}}
-					/>
-				) : null}
-			</Head>
-			<Header header={header} headerMenus={headerMenu?.edges} socialLinks={footer?.socialLinks}/>
-			<Container maxW={'1150px'} marginY={4}>
-				{children}
-			</Container>
-			<Footer footer={footer} footerMenus={footerMenu?.edges}/>
-		</div>
+		<AppProvider>
+			<div className={montserrat.className}>
+				<Seo seo={seo} uri={uri}/>
+				<Head>
+					<link rel="shortcut icon" href={header?.favicon}/>
+					{seo?.schemaDetails ? (
+						<script
+							type='application/ld+json'
+							className='yoast-schema-graph'
+							key='yoastSchema'
+							dangerouslySetInnerHTML={{__html: sanitize  ( seo.schemaDetails )}}
+						/>
+					) : null}
+				</Head>
+				<Header header={header} headerMenus={headerMenu?.edges} socialLinks={footer?.socialLinks}/>
+				<Container maxW={'1150px'} marginY={4}>
+					{children}
+				</Container>
+				<Footer footer={footer} footerMenus={footerMenu?.edges}/>
+			</div>
+		</AppProvider>
 	);
 };
 

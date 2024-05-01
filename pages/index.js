@@ -1,16 +1,17 @@
 import client from "@/src/apollo/client";
 import Layout from "@/src/components/layout";
+import Products from "@/src/components/products";
 import SliderHome from "@/src/components/ui/Slider";
 import SliderBlog from "@/src/components/ui/SliderBlog";
 import { GET_PAGE } from "@/src/queries/pages/get-page";
 import { sanitize } from "@/src/utils/miscellaneous";
 import { handleRedirectsAndReturnData } from "@/src/utils/slug";
 import { Tooltip } from "@chakra-ui/react";
+import axios from "axios";
 
 
 
 export default function Home({data}) {
-
 
   return (
 		<Layout data={data}>
@@ -37,12 +38,16 @@ export default function Home({data}) {
 
 export async function getStaticProps( ) {
 
+
 	const { data, errors } = await client.query( {
 		query: GET_PAGE,
 		variables: {
 			uri: '/',
 		},
 	} );
+
+
+
 
 	const defaultProps = {
 		props: {

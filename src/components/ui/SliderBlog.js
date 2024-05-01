@@ -37,7 +37,6 @@ const breakpoints = {
   },
 };
 
-console.log(blogs)
   return (
     <>
       <Heading as={'h2'} textAlign={'center'} padding={4}>Materiale Informative</Heading>
@@ -56,8 +55,8 @@ console.log(blogs)
       
       >
         
-        {blogs.map(blog=>(
-        <SwiperSlide className='py-4 px-1'>
+        {blogs.map( blog=>(
+        <SwiperSlide className='py-4 px-1' key={blog?.node?.slug}>
           <Box border={1} paddingBottom={4} borderColor={'#ececec'} borderRadius={10} overflow={'hidden'} boxShadow={'0 4px 8px rgba(0, 0, 0, 0.1)'} >
          
             <Image { ...blog?.node.featuredImage?.node } width="400" height="305" layout="fill" containerClassNames="w-96 sm:-w-[600px] md:w-[400px] h-56 sm:h-338px md:h-225px" title={blog?.node.title ?? ''}/>

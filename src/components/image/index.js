@@ -2,7 +2,9 @@ import Img from 'next/image';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import {DEFAULT_IMG_URL} from '../../utils/constants';
+import { DEFAULT_IMG_URL } from '@/src/utils/constants/images';
+
+
 
 /**
  * Image Component.
@@ -70,7 +72,7 @@ Image.defaultProps = {
 	sourceUrl: '',
 	showDefault: true,
 	containerClassNames: '',
-	className: 'post__image',
+	className: 'product__image',
 };
 
 export default Image;

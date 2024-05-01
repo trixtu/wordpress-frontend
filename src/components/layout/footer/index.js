@@ -1,6 +1,6 @@
 import { getIconComponentByName } from '@/src/utils/icons-map';
 import { isArray, isEmpty } from 'lodash'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NewsletterSubscribe from './NewsletterSubscribe';
 import { Box, Container, Divider, Grid, GridItem, SimpleGrid, Text } from '@chakra-ui/react';
 import ContactMe from '../../ui/ContactMe';
@@ -8,10 +8,15 @@ import Link from 'next/link';
 import TrimiteMesaj from '../../ui/TrimiteMesaj';
 
 const Footer = ({footer, footerMenus}) => {
+  const [ isMounted, setMount ] = useState(false);
+
+  useEffect(()=>{
+    setMount(true);
+  },[])
   
-  if(isEmpty(footerMenus)){
-    return null;
-  }
+  // if(isEmpty(footerMenus)){
+  //   return null;
+  // }
   
   return (
     <footer  
