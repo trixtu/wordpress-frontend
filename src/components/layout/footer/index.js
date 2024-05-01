@@ -9,9 +9,9 @@ import TrimiteMesaj from '../../ui/TrimiteMesaj';
 
 const Footer = ({footer, footerMenus}) => {
   
-  //if(isEmpty(footerMenus)){
-    //return null;
-  //}
+  if(isEmpty(footerMenus)){
+    return null;
+  }
   
   return (
     <footer  
